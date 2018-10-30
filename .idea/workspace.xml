@@ -2,14 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f90b36c-8693-4c0c-ac95-e1ceea18b7cc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/cart.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer.py" beforeDir="false" afterPath="$PROJECT_DIR$/customer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/payment_objects/id_list.pickle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/payment_objects/payment0.pickle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/payment_objects/payment1.pickle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/payment_objects/payment2.pickle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/guest.py" beforeDir="false" afterPath="$PROJECT_DIR$/guest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment.py" beforeDir="false" afterPath="$PROJECT_DIR$/payment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/admin_objects/admin0.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/db/admin_objects/admin0.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/admin_objects/admin1.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/admin_objects/admin2.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/admin_objects/id_list.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/db/admin_objects/id_list.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/cart_objects/cart0.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/cart_objects/cart1.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/cart_objects/id_list.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/customer_objects/customer0.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/db/customer_objects/customer0.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/customer_objects/customer1.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/customer_objects/customer2.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/customer_objects/id_list.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/db/customer_objects/id_list.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/guest_objects/guest0.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/guest_objects/guest1.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/guest_objects/guest2.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/guest_objects/id_list.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/product_objects/id_list.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/db/product_objects/id_list.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/product_objects/product0.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/db/product_objects/product0.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/product_objects/product1.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/db/product_objects/product1.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/shipment_objects/id_list.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/shipment_objects/shipment0.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/shipment_objects/shipment1.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/shipment_objects/shipment2.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/shipment_objects/shipment3.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/shipment_objects/shipment4.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/shipment_objects/shipment5.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lets_shop.py" beforeDir="false" afterPath="$PROJECT_DIR$/lets_shop.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product.py" beforeDir="false" afterPath="$PROJECT_DIR$/product.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,57 +44,48 @@
     <session id="-694770793">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="31" />
+          <entry key="py" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="31" />
+          <entry key="Python" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="12534" />
+          <entry key="py" value="16036" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="12534" />
+          <entry key="Python" value="16036" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="32" column="43" selection-start-line="28" selection-start-column="4" selection-end-line="32" selection-end-column="43" />
+            <state relative-caret-position="-216">
+              <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
-                <marker date="1540918765631" expanded="true" signature="88:89" ph="..." />
-                <marker date="1540918765631" expanded="true" signature="88:93" ph="..." />
-                <marker date="1540918765631" expanded="true" signature="615:617" ph="..." />
-                <marker date="1540918765631" expanded="true" signature="1422:1690" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shipment.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="35" column="19" lean-forward="true" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
-              <folding>
-                <marker date="1540918807919" expanded="true" signature="33:38" ph="..." />
+                <marker date="1540927836567" expanded="true" signature="88:89" ph="..." />
+                <marker date="1540927836567" expanded="true" signature="88:93" ph="..." />
+                <marker date="1540927836567" expanded="true" signature="673:675" ph="..." />
+                <marker date="1540927836567" expanded="true" signature="1308:1314" ph="..." />
+                <marker date="1540927836567" expanded="true" signature="2053:2321" ph="..." />
               </folding>
             </state>
           </provider>
@@ -81,24 +94,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/customer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-216">
-              <caret line="43" column="32" lean-forward="true" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
+            <state relative-caret-position="-72">
+              <caret line="30" column="60" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="60" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
-                <marker date="1540923088390" expanded="true" signature="1811:1907" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/guest.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="34" column="38" lean-forward="true" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-                <marker date="1540923407758" expanded="true" signature="817:922" ph="..." />
+                <marker date="1540925082618" expanded="true" signature="1872:1968" ph="..." />
               </folding>
             </state>
           </provider>
@@ -107,14 +107,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/product.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+            <state relative-caret-position="1027">
+              <caret line="56" column="20" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
               <folding>
-                <marker date="1540922433682" expanded="true" signature="848:1213" ph="..." />
-                <marker date="1540922433682" expanded="true" signature="1208:1209" ph="..." />
-                <marker date="1540922433682" expanded="true" signature="1342:1373" ph="..." />
-                <marker date="1540922433682" expanded="true" signature="1393:1425" ph="..." />
-                <marker date="1540922433682" expanded="true" signature="1569:1570" ph="..." />
+                <marker date="1540927727916" expanded="true" signature="1530:1536" ph="..." />
               </folding>
             </state>
           </provider>
@@ -123,18 +119,19 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-879">
-              <caret line="263" column="58" selection-start-line="263" selection-start-column="58" selection-end-line="263" selection-end-column="58" />
+            <state relative-caret-position="1368">
+              <caret line="58" column="24" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
-                <marker date="1540909265813" expanded="true" signature="301:472" ph="..." />
-                <marker date="1540909265813" expanded="true" signature="494:495" ph="..." />
-                <marker date="1540909265813" expanded="true" signature="833:834" ph="..." />
-                <marker date="1540909265813" expanded="true" signature="2142:2376" ph="..." />
-                <marker date="1540909265813" expanded="true" signature="2400:2401" ph="..." />
-                <marker date="1540909265813" expanded="true" signature="2643:2644" ph="..." />
-                <marker date="1540909265813" expanded="true" signature="2810:2813" ph="..." />
-                <marker date="1540909265813" expanded="true" signature="3116:3264" ph="..." />
+                <marker date="1540926179717" expanded="true" signature="301:472" ph="..." />
+                <marker date="1540926179717" expanded="true" signature="494:495" ph="..." />
+                <marker date="1540926179717" expanded="true" signature="833:834" ph="..." />
+                <marker date="1540926179717" expanded="true" signature="3033:3267" ph="..." />
+                <marker date="1540926179717" expanded="true" signature="3291:3292" ph="..." />
+                <marker date="1540926179717" expanded="true" signature="3534:3535" ph="..." />
+                <marker date="1540926179717" expanded="true" signature="3701:3704" ph="..." />
+                <marker date="1540926179717" expanded="true" signature="4007:4155" ph="..." />
+                <marker date="1540926179717" expanded="true" signature="6355:6568" ph="..." />
               </folding>
             </state>
           </provider>
@@ -143,7 +140,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/payment.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
+            <state relative-caret-position="624">
               <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
               <folding>
                 <marker date="1540919883765" expanded="true" signature="32:37" ph="..." />
@@ -155,14 +152,33 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cart.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
+            <state relative-caret-position="840">
               <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
                 <marker date="1540923464299" expanded="true" signature="595:601" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lets_shop.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+                <marker date="1540929991612" expanded="true" signature="70:71" ph="..." />
+                <marker date="1540929991612" expanded="true" signature="968:1192" ph="..." />
+                <marker date="1540929991612" expanded="true" signature="1222:1411" ph="..." />
+                <marker date="1540929991612" expanded="true" signature="1438:1614" ph="..." />
+                <marker date="1540929991612" expanded="true" signature="1641:1753" ph="..." />
+                <marker date="1540929991612" expanded="true" signature="1777:2020" ph="..." />
+                <marker date="1540929991612" expanded="true" signature="2041:2471" ph="..." />
               </folding>
             </state>
           </provider>
@@ -190,14 +206,15 @@
       <list>
         <option value="$PROJECT_DIR$/db/product.py" />
         <option value="$PROJECT_DIR$/__init__.py" />
-        <option value="$PROJECT_DIR$/database.py" />
-        <option value="$PROJECT_DIR$/admin.py" />
         <option value="$PROJECT_DIR$/shipment.py" />
         <option value="$PROJECT_DIR$/payment.py" />
-        <option value="$PROJECT_DIR$/product.py" />
-        <option value="$PROJECT_DIR$/customer.py" />
         <option value="$PROJECT_DIR$/guest.py" />
         <option value="$PROJECT_DIR$/cart.py" />
+        <option value="$PROJECT_DIR$/customer.py" />
+        <option value="$PROJECT_DIR$/database.py" />
+        <option value="$PROJECT_DIR$/product.py" />
+        <option value="$PROJECT_DIR$/admin.py" />
+        <option value="$PROJECT_DIR$/lets_shop.py" />
       </list>
     </option>
   </component>
@@ -227,6 +244,30 @@
               <item name="scripting-assignment-3" type="462c0819:PsiDirectoryNode" />
               <item name="db" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="scripting-assignment-3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scripting-assignment-3" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="admin_objects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scripting-assignment-3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scripting-assignment-3" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="customer_objects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scripting-assignment-3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scripting-assignment-3" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="misc_objects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scripting-assignment-3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scripting-assignment-3" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="product_objects" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -249,7 +290,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.admin">
+  <component name="RunManager" selected="Python.lets_shop">
     <configuration name="admin" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="scripting-assignment-3" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -271,27 +312,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="customer" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="scripting-assignment-3" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/customer.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="guest" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="scripting-assignment-3" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -305,6 +325,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/guest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="lets_shop" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="scripting-assignment-3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lets_shop.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -356,19 +397,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.customer" />
       <item itemvalue="Python.guest" />
       <item itemvalue="Python.admin" />
       <item itemvalue="Python.payment" />
       <item itemvalue="Python.shipment" />
+      <item itemvalue="Python.lets_shop" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.lets_shop" />
         <item itemvalue="Python.admin" />
         <item itemvalue="Python.payment" />
         <item itemvalue="Python.shipment" />
         <item itemvalue="Python.guest" />
-        <item itemvalue="Python.customer" />
       </list>
     </recent_temporary>
   </component>
@@ -389,20 +430,20 @@
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15673982" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20454545" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.109298535" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.47797716" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -412,29 +453,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/product.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/db/product.py" />
     <entry file="file://$PROJECT_DIR$/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-879">
-          <caret line="263" column="58" selection-start-line="263" selection-start-column="58" selection-end-line="263" selection-end-column="58" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <marker date="1540909265813" expanded="true" signature="301:472" ph="..." />
-            <marker date="1540909265813" expanded="true" signature="494:495" ph="..." />
-            <marker date="1540909265813" expanded="true" signature="833:834" ph="..." />
-            <marker date="1540909265813" expanded="true" signature="2142:2376" ph="..." />
-            <marker date="1540909265813" expanded="true" signature="2400:2401" ph="..." />
-            <marker date="1540909265813" expanded="true" signature="2643:2644" ph="..." />
-            <marker date="1540909265813" expanded="true" signature="2810:2813" ph="..." />
-            <marker date="1540909265813" expanded="true" signature="3116:3264" ph="..." />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/shipment.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -442,47 +463,6 @@
           <caret line="35" column="19" lean-forward="true" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
           <folding>
             <marker date="1540918807919" expanded="true" signature="33:38" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="32" column="43" selection-start-line="28" selection-start-column="4" selection-end-line="32" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <marker date="1540918765631" expanded="true" signature="88:89" ph="..." />
-            <marker date="1540918765631" expanded="true" signature="88:93" ph="..." />
-            <marker date="1540918765631" expanded="true" signature="615:617" ph="..." />
-            <marker date="1540918765631" expanded="true" signature="1422:1690" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/payment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
-          <folding>
-            <marker date="1540919883765" expanded="true" signature="32:37" ph="..." />
-            <marker date="1540919883765" expanded="true" signature="787:793" ph="..." />
-            <marker date="1540919883765" expanded="true" signature="833:839" ph="..." />
-            <marker date="1540919883765" expanded="true" signature="859:891" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/product.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
-          <folding>
-            <marker date="1540922433682" expanded="true" signature="848:1213" ph="..." />
-            <marker date="1540922433682" expanded="true" signature="1208:1209" ph="..." />
-            <marker date="1540922433682" expanded="true" signature="1342:1373" ph="..." />
-            <marker date="1540922433682" expanded="true" signature="1393:1425" ph="..." />
-            <marker date="1540922433682" expanded="true" signature="1569:1570" ph="..." />
           </folding>
         </state>
       </provider>
@@ -498,24 +478,98 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/customer.py">
+    <entry file="file://$PROJECT_DIR$/database.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-216">
-          <caret line="43" column="32" lean-forward="true" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
+        <state relative-caret-position="1368">
+          <caret line="58" column="24" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <marker date="1540923088390" expanded="true" signature="1811:1907" ph="..." />
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1540926179717" expanded="true" signature="301:472" ph="..." />
+            <marker date="1540926179717" expanded="true" signature="494:495" ph="..." />
+            <marker date="1540926179717" expanded="true" signature="833:834" ph="..." />
+            <marker date="1540926179717" expanded="true" signature="3033:3267" ph="..." />
+            <marker date="1540926179717" expanded="true" signature="3291:3292" ph="..." />
+            <marker date="1540926179717" expanded="true" signature="3534:3535" ph="..." />
+            <marker date="1540926179717" expanded="true" signature="3701:3704" ph="..." />
+            <marker date="1540926179717" expanded="true" signature="4007:4155" ph="..." />
+            <marker date="1540926179717" expanded="true" signature="6355:6568" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/payment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+          <folding>
+            <marker date="1540919883765" expanded="true" signature="32:37" ph="..." />
+            <marker date="1540919883765" expanded="true" signature="787:793" ph="..." />
+            <marker date="1540919883765" expanded="true" signature="833:839" ph="..." />
+            <marker date="1540919883765" expanded="true" signature="859:891" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cart.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
+        <state relative-caret-position="840">
           <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
             <marker date="1540923464299" expanded="true" signature="595:601" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-72">
+          <caret line="30" column="60" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <marker date="1540925082618" expanded="true" signature="1872:1968" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-216">
+          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <marker date="1540927836567" expanded="true" signature="88:89" ph="..." />
+            <marker date="1540927836567" expanded="true" signature="88:93" ph="..." />
+            <marker date="1540927836567" expanded="true" signature="673:675" ph="..." />
+            <marker date="1540927836567" expanded="true" signature="1308:1314" ph="..." />
+            <marker date="1540927836567" expanded="true" signature="2053:2321" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/product.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1027">
+          <caret line="56" column="20" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
+          <folding>
+            <marker date="1540927727916" expanded="true" signature="1530:1536" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lets_shop.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <marker date="1540929991612" expanded="true" signature="70:71" ph="..." />
+            <marker date="1540929991612" expanded="true" signature="968:1192" ph="..." />
+            <marker date="1540929991612" expanded="true" signature="1222:1411" ph="..." />
+            <marker date="1540929991612" expanded="true" signature="1438:1614" ph="..." />
+            <marker date="1540929991612" expanded="true" signature="1641:1753" ph="..." />
+            <marker date="1540929991612" expanded="true" signature="1777:2020" ph="..." />
+            <marker date="1540929991612" expanded="true" signature="2041:2471" ph="..." />
           </folding>
         </state>
       </provider>

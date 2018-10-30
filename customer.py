@@ -28,6 +28,7 @@ class Customer:
             id_list.append(next_id)
             database.save_customer_ids(id_list)
         database.save_customer(self)
+        database.map_customer_name_to_id(self.name, self.id)
 
     def remove(self):
         database.remove_customer(self.id)

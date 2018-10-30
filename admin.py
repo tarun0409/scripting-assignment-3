@@ -22,9 +22,24 @@ class Admin:
             id_list.append(next_id)
             database.save_admin_ids(id_list)
         database.save_admin(self)
+        database.map_admin_name_to_id(self.name, self.id)
 
     def remove(self):
         database.remove_admin(self.id)
+
+    def get_all_products_details(self):
+        product_ids = database.get_product_ids()
+        results = []
+        for i in product_ids:
+            product_obj = database.get_product(i)
+            result_obj = dict()
+            result_obj["ID"] = product_obj.get_id()
+            result_obj["NAME"] = product_obj.get_name()
+            result_obj["PRICE"] = product_obj.get_price()
+            result_obj["GROUP"] = product_obj.get_group()
+            result_obj["SUBGROUP"] = product_obj.get_subgroup()
+            results.append(result_obj)
+        return results
 
     def view_all_products(self):
         product_ids = database.get_product_ids()
@@ -61,20 +76,3 @@ class Admin:
     def get_admin_object(admin_id):
         return database.get_admin(admin_id)
 
-
-
-# a = Admin("admin1")
-# b = Admin("admin2")
-# c = Admin("admin3")
-
-a = Admin.get_admin_object(1)
-# a.view_all_products()
-# a.add_product("nescafe", "110.10", "groceries", "misc")
-# a.delete_product(3)
-# a.modify_product(0, "price", 50.50)
-# a.view_all_products()
-# a.make_shipment(1, 2, 3, 4)
-# a.make_shipment(2, 3, 4, 5)
-# a.make_shipment(4, 5, 6, 7)
-# a.confirm_shipment(2)
-# a.view_all_shipments()

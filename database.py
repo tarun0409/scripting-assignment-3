@@ -46,6 +46,33 @@ def remove_admin(admin_id):
         os.remove(file_name)
 
 
+def map_admin_name_to_id(admin_name, admin_id):
+    map_file_name = "db/misc_objects/admin_name_id.pickle"
+    if os.path.exists(map_file_name):
+        map_file = open(map_file_name, "rb")
+        admin_id_map = pickle.load(map_file)
+        map_file.close()
+        admin_id_map[admin_name] = admin_id
+        os.remove(map_file_name)
+        map_file = open(map_file_name, "wb")
+        pickle.dump(admin_id_map, map_file)
+        map_file.close()
+    else:
+        admin_id_map = dict()
+        admin_id_map[admin_name] = admin_id
+        map_file = open(map_file_name, "wb")
+        pickle.dump(admin_id_map, map_file)
+        map_file.close()
+
+
+def get_admin_id_from_name(admin_name):
+    map_file_name = "db/misc_objects/admin_name_id.pickle"
+    map_file = open(map_file_name, "rb")
+    admin_id_map = pickle.load(map_file)
+    map_file.close()
+    return admin_id_map[admin_name]
+
+
 def save_product(product_obj):
     file_name = "db/product_objects/product" + str(product_obj.id) + ".pickle"
     if os.path.exists(file_name):
@@ -176,6 +203,33 @@ def remove_customer(customer_id):
     file_name = "db/customer_objects/customer" + str(customer_id) + ".pickle"
     if os.path.exists(file_name):
         os.remove(file_name)
+
+
+def map_customer_name_to_id(customer_name, customer_id):
+    map_file_name = "db/misc_objects/customer_name_id.pickle"
+    if os.path.exists(map_file_name):
+        map_file = open(map_file_name, "rb")
+        customer_id_map = pickle.load(map_file)
+        map_file.close()
+        customer_id_map[customer_name] = customer_id
+        os.remove(map_file_name)
+        map_file = open(map_file_name, "wb")
+        pickle.dump(customer_id_map, map_file)
+        map_file.close()
+    else:
+        customer_id_map = dict()
+        customer_id_map[customer_name] = customer_id
+        map_file = open(map_file_name, "wb")
+        pickle.dump(customer_id_map, map_file)
+        map_file.close()
+
+
+def get_customer_id_from_name(customer_name):
+    map_file_name = "db/misc_objects/customer_name_id.pickle"
+    map_file = open(map_file_name, "rb")
+    customer_id_map = pickle.load(map_file)
+    map_file.close()
+    return customer_id_map[customer_name]
 
 
 def save_guest(guest_obj):

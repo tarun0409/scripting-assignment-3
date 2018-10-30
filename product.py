@@ -51,6 +51,12 @@ class Product:
     def get_price(self):
         return self.price
 
+    def get_group(self):
+        return self.group
+
+    def get_subgroup(self):
+        return self.sub_group
+
     def get_string(self):
         prod_str = "id = "+str(self.id)+"\nname = "+self.name+"\nprice = "+str(self.price)+"\n"
         return prod_str
