@@ -3,6 +3,7 @@ from customer import Customer
 from admin import Admin
 from payment import Payment
 from cart import Cart
+from guest import Guest
 
 
 def get_admin_create_menu():
@@ -70,10 +71,9 @@ def get_admin_menu(admin_obj):
     print("2. Add products")
     print("3. Delete products")
     print("4. Modify products")
-    print("5. Make shipment")
-    print("6. Confirm Delivery")
+    print("5. Confirm Delivery")
     opt = int(input("Enter the appropriate number : "))
-    while opt != 7:
+    while opt != 6:
         if opt == 1:
             view_products(admin_obj)
         elif opt == 2:
@@ -82,6 +82,9 @@ def get_admin_menu(admin_obj):
             delete_product_menu(admin_obj)
         elif opt == 4:
             modify_product_menu(admin_obj)
+        elif opt == 5:
+            shipment_id = int(input("Enter the shipment ID : "))
+            admin_obj.confirm_delivery(shipment_id)
         print("1. View products")
         print("2. Add products")
         print("3. Delete products")
@@ -116,6 +119,24 @@ def get_register_menu():
     phone_number = input("Phone number : ")
     customer_obj = Customer(customer_name, customer_address, phone_number)
     database.save_customer(customer_obj)
+
+
+def get_guest_menu():
+    guest_obj = Guest()
+    print("1. View products")
+    print("2. Register")
+    print("3. Exit")
+    opt = int(input("Enter the corresponding number : "))
+    while opt != 3:
+        if opt == 1:
+            view_products(guest_obj)
+        elif opt == 2:
+            get_register_menu()
+            break
+        print("1. View products")
+        print("2. Register")
+        print("3. Exit")
+        opt = int(input("Enter the corresponding number : "))
 
 
 def buy_product(customer_obj):
@@ -229,15 +250,17 @@ def get_first_menu():
     print("3. Continue as guest")
     print("4. Admin Menu")
     print("5. Exit")
-    opt = input("Choose the appropriate number: ")
-    # if opt == 1:
-    #     get_login_menu()
-    # elif opt == 2:
-    #     get_register_menu()
-    # elif opt== 3:
-    #     get_guest_menu()
-    # else:
-    #     print("Thank you please visit again")
+    opt = int(input("Choose the appropriate number: "))
+    if opt == 1:
+        customer_login_menu()
+    elif opt == 2:
+        get_register_menu()
+    elif opt == 3:
+        get_guest_menu()
+    elif opt == 4:
+        get_admin_start_menu()
+    else:
+        print("Thank you please visit again")
 
 
 customer_login_menu()

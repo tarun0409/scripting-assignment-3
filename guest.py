@@ -21,6 +21,20 @@ class Guest:
             database.save_guest_ids(id_list)
         database.save_guest(self)
 
+    def get_all_products_details(self):
+        product_ids = database.get_product_ids()
+        results = []
+        for i in product_ids:
+            product_obj = database.get_product(i)
+            result_obj = dict()
+            result_obj["ID"] = product_obj.get_id()
+            result_obj["NAME"] = product_obj.get_name()
+            result_obj["PRICE"] = product_obj.get_price()
+            result_obj["GROUP"] = product_obj.get_group()
+            result_obj["SUBGROUP"] = product_obj.get_subgroup()
+            results.append(result_obj)
+        return results
+
     def view_all_products(self):
         product_ids = database.get_product_ids()
         for i in product_ids:
