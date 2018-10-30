@@ -1,20 +1,16 @@
 import pickle
 import os
+from product import Product
 
 
-class Product:
+class Cart:
     id = 0
-    name = "unknown"
-    price = 0.0
-    group = "new group"
-    sub_group = "new_sub_group"
+    number_of_products = 0
+    products = []
+    total_price = 0.0
 
-    def __init__(self, name, price, group, sub_group):
-        self.name = name
-        self.price = price
-        self.group = group
-        self.sub_group = sub_group
-        id_file_name = "db/product_objects/id_list.pickle"
+    def __init__(self):
+        id_file_name = "db/cart_objects/id_list.pickle"
 
         try:
             id_file = open(id_file_name, "rb")
@@ -39,7 +35,7 @@ class Product:
         self.save_obj()
 
     def save_obj(self):
-        file_name = "db/product_objects/product"+str(self.id)+".pickle"
+        file_name = "db/cart_objects/cart"+str(self.id)+".pickle"
         if os.path.exists(file_name):
             os.remove(file_name)
         p_out = open(file_name, "wb")
@@ -47,14 +43,14 @@ class Product:
         p_out.close()
 
     @staticmethod
-    def get_obj(product_id):
-        file_name = "db/product_objects/product"+str(product_id)+".pickle"
+    def get_obj(cart_id):
+        file_name = "db/cart_objects/cart"+str(cart_id)+".pickle"
         p_in = open(file_name, "rb")
         new_obj = pickle.load(p_in)
         p_in.close()
         return new_obj
 
 
-a = Product("product1", 23.40, "grp1", "sub1")
-b = Product("product2", 34.50, "grp2", "sub1")
-c = Product("product3", 100.00, "grp2", "sub2")
+a = Cart()
+b = Cart()
+c = Cart()
