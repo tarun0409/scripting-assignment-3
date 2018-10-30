@@ -28,7 +28,15 @@ class Payment:
             payment_file = open(payment_file_name, "wb")
             pickle.dump(payment_list, payment_file)
 
+    @staticmethod
+    def remove(customer_id):
+        payment_file_name = "db/payment_objects/customer"+str(customer_id)+".pickle"
+        if os.path.exists(payment_file_name):
+            os.remove(payment_file_name)
 
-a = Payment(0, "name1", "visa", "1234")
-b = Payment(0, "name2", "master card", "1235")
-c = Payment(1, "name3", "visa", "12300")
+# a = Payment(0, "name1", "visa", "1234")
+# b = Payment(0, "name2", "master card", "1235")
+# c = Payment(1, "name3", "visa", "12300")
+
+
+Payment.remove(1)

@@ -48,7 +48,20 @@ class Admin:
         p_in.close()
         return new_obj
 
+    @staticmethod
+    def remove(admin_id):
+        id_file_name = "db/admin_objects/id_list.pickle"
+        id_file = open(id_file_name, "rb")
+        id_list = pickle.load(id_file)
+        id_file.close()
+        if admin_id in id_list:
+            id_list.remove(admin_id)
+        admin_file_name = "db/admin_objects/admin" + str(admin_id) + ".pickle"
+        if os.path.exists(admin_file_name):
+            os.remove(admin_file_name)
 
-a = Admin("user1")
-b = Admin("user2")
-c = Admin("user3")
+
+# a = Admin("user1")
+# b = Admin("user2")
+# c = Admin("user3")
+Admin.remove(6)

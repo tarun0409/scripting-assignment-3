@@ -52,7 +52,21 @@ class Customer:
         p_in.close()
         return new_obj
 
+    @staticmethod
+    def remove(customer_id):
+        id_file_name = "db/customer_objects/id_list.pickle"
+        id_file = open(id_file_name, "rb")
+        id_list = pickle.load(id_file)
+        id_file.close()
+        if customer_id in id_list:
+            id_list.remove(customer_id)
+        customer_file_name = "db/customer_objects/customer" + str(customer_id) + ".pickle"
+        if os.path.exists(customer_file_name):
+            os.remove(customer_file_name)
 
-a = Customer("tarun", "Prithvi apts chennai", 12345)
-b = Customer("shreyas", "203 OBH", 3243)
-c = Customer("sampoo", "adambakkam", 543422)
+
+# a = Customer("tarun", "Prithvi apts chennai", 12345)
+# b = Customer("shreyas", "203 OBH", 3243)
+# c = Customer("sampoo", "adambakkam", 543422)
+
+Customer.remove(1)

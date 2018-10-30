@@ -50,7 +50,20 @@ class Cart:
         p_in.close()
         return new_obj
 
+    @staticmethod
+    def remove(cart_id):
+        id_file_name = "db/cart_objects/id_list.pickle"
+        id_file = open(id_file_name, "rb")
+        id_list = pickle.load(id_file)
+        id_file.close()
+        if cart_id in id_list:
+            id_list.remove(cart_id)
+        cart_file_name = "db/cart_objects/cart" + str(cart_id) + ".pickle"
+        if os.path.exists(cart_file_name):
+            os.remove(cart_file_name)
 
-a = Cart()
-b = Cart()
-c = Cart()
+
+# a = Cart()
+# b = Cart()
+# c = Cart()
+Cart.remove(0)

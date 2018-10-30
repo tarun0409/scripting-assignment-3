@@ -46,7 +46,20 @@ class Guest:
         p_in.close()
         return new_obj
 
+    @staticmethod
+    def remove(guest_id):
+        id_file_name = "db/guest_objects/id_list.pickle"
+        id_file = open(id_file_name, "rb")
+        id_list = pickle.load(id_file)
+        id_file.close()
+        if guest_id in id_list:
+            id_list.remove(guest_id)
+        guest_file_name = "db/guest_objects/guest" + str(guest_id) + ".pickle"
+        if os.path.exists(guest_file_name):
+            os.remove(guest_file_name)
 
-a = Guest()
-b = Guest()
-c = Guest()
+
+# a = Guest()
+# b = Guest()
+# c = Guest()
+Guest.remove(2)

@@ -54,7 +54,21 @@ class Product:
         p_in.close()
         return new_obj
 
+    @staticmethod
+    def remove(product_id):
+        id_file_name = "db/product_objects/id_list.pickle"
+        id_file = open(id_file_name, "rb")
+        id_list = pickle.load(id_file)
+        id_file.close()
+        if product_id in id_list:
+            id_list.remove(product_id)
+        product_file_name = "db/product_objects/product"+str(product_id)+".pickle"
+        if os.path.exists(product_file_name):
+            os.remove(product_file_name)
 
-a = Product("product1", 23.40, "grp1", "sub1")
-b = Product("product2", 34.50, "grp2", "sub1")
-c = Product("product3", 100.00, "grp2", "sub2")
+# a = Product("product1", 23.40, "grp1", "sub1")
+# b = Product("product2", 34.50, "grp2", "sub1")
+# c = Product("product3", 100.00, "grp2", "sub2")
+
+
+Product.remove(1)
