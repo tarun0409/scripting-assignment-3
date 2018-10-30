@@ -1,4 +1,6 @@
 import database
+from customer import Customer
+from product import Product
 
 
 class Guest:
@@ -18,6 +20,16 @@ class Guest:
             id_list.append(next_id)
             database.save_guest_ids(id_list)
         database.save_guest(self)
+
+    def view_all_products(self):
+        product_ids = database.get_product_ids()
+        for i in product_ids:
+            product_obj = database.get_product(i)
+            print(product_obj.get_string())
+
+    def register(self, name, address, ph_no):
+        customer_obj = Customer(name, address, ph_no)
+        database.save_customer(customer_obj)
 
     def remove(self):
         database.remove_guest(self.id)

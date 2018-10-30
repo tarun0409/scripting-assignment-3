@@ -1,4 +1,5 @@
 import database
+from product import Product
 
 
 class Cart:
@@ -24,6 +25,23 @@ class Cart:
 
     def remove(self):
         database.remove_cart(self.id)
+
+    def add_product(self, product_id):
+        self.products.append(product_id)
+        self.number_of_products += 1
+        database.save_cart(self)
+
+    def remove_product(self, product_id):
+        self.products.remove(product_id)
+        self.number_of_products -= 1
+        database.save_cart(self)
+
+    def get_cart_items(self):
+        name_array = []
+        for prod in self.products:
+            prod_obj = database.get_product(prod)
+            name_array.append(prod_obj.get_name())
+        return name_array
 
 
 # a = Cart()

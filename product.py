@@ -42,6 +42,15 @@ class Product:
     def remove(self):
         database.remove_product(self.id)
 
+    def get_id(self):
+        return self.id
+
+    def get_name(self):
+        return self.name
+
+    def get_price(self):
+        return self.price
+
     def get_string(self):
         prod_str = "id = "+str(self.id)+"\nname = "+self.name+"\nprice = "+str(self.price)+"\n"
         return prod_str
