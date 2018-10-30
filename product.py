@@ -28,7 +28,6 @@ class Product:
         database.save_product(self)
 
     def modify_product(self, attribute_name, modified_value):
-        print("reached modify")
         if attribute_name == "name":
             self.name = modified_value
         elif attribute_name == "price":

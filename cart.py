@@ -26,25 +26,24 @@ class Cart:
     def remove(self):
         database.remove_cart(self.id)
 
-    def add_product(self, product_id):
-        self.products.append(product_id)
-        self.number_of_products += 1
-        database.save_cart(self)
+    def get_total_price(self):
+        return self.total_price
 
-    def remove_product(self, product_id):
-        self.products.remove(product_id)
-        self.number_of_products -= 1
-        database.save_cart(self)
+    def add_product(self, product_obj):
+        if product_obj not in self.products:
+            self.products.append(product_obj)
+            self.number_of_products += 1
+            self.total_price += product_obj.get_price()
+            database.save_cart(self)
+
+    def remove_product(self, product_obj):
+        if product_obj in self.products:
+            self.products.remove(product_obj)
+            self.number_of_products -= 1
+            self.total_price -= product_obj.get_price()
+            database.save_cart(self)
 
     def get_cart_items(self):
-        name_array = []
-        for prod in self.products:
-            prod_obj = database.get_product(prod)
-            name_array.append(prod_obj.get_name())
-        return name_array
+        return self.products
 
-
-# a = Cart()
-# b = Cart()
-# c = Cart()
 
