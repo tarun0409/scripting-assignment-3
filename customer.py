@@ -1,5 +1,4 @@
-import pickle
-import os
+import database
 
 
 class Customer:
@@ -12,61 +11,24 @@ class Customer:
         self.name = name
         self.address = address
         self.phone_number = phone_number
-        id_file_name = "db/customer_objects/id_list.pickle"
-
-        try:
-            id_file = open(id_file_name, "rb")
-            id_list = pickle.load(id_file)
-            id_file.close()
+        id_list = database.get_customer_ids()
+        if not id_list:
+            self.id = 0
+            id_list.append(0)
+            database.save_customer_ids(id_list)
+        else:
             list_len = len(id_list)
-            last_id = id_list[list_len-1]
+            last_id = id_list[list_len - 1]
             next_id = last_id + 1
             self.id = next_id
             id_list.append(next_id)
-            id_file = open(id_file_name, "wb")
-            pickle.dump(id_list, id_file)
-            id_file.close()
+            database.save_customer_ids(id_list)
+        database.save_customer(self)
 
-        except FileNotFoundError:
-            self.id = 0
-            id_list = [0]
-            id_file = open(id_file_name, "wb")
-            pickle.dump(id_list, id_file)
-            id_file.close()
-
-        self.save_obj()
-
-    def save_obj(self):
-        file_name = "db/customer_objects/customer"+str(self.id)+".pickle"
-        if os.path.exists(file_name):
-            os.remove(file_name)
-        p_out = open(file_name, "wb")
-        pickle.dump(self, p_out)
-        p_out.close()
-
-    @staticmethod
-    def get_obj(customer_id):
-        file_name = "db/customer_objects/customer"+str(customer_id)+".pickle"
-        p_in = open(file_name, "rb")
-        new_obj = pickle.load(p_in)
-        p_in.close()
-        return new_obj
-
-    @staticmethod
-    def remove(customer_id):
-        id_file_name = "db/customer_objects/id_list.pickle"
-        id_file = open(id_file_name, "rb")
-        id_list = pickle.load(id_file)
-        id_file.close()
-        if customer_id in id_list:
-            id_list.remove(customer_id)
-        customer_file_name = "db/customer_objects/customer" + str(customer_id) + ".pickle"
-        if os.path.exists(customer_file_name):
-            os.remove(customer_file_name)
+    def remove(self):
+        database.remove_customer(self.id)
 
 
 # a = Customer("tarun", "Prithvi apts chennai", 12345)
 # b = Customer("shreyas", "203 OBH", 3243)
 # c = Customer("sampoo", "adambakkam", 543422)
-
-Customer.remove(1)

@@ -1,6 +1,4 @@
-import pickle
-import os
-from product import Product
+import database
 
 
 class Cart:
@@ -10,60 +8,25 @@ class Cart:
     total_price = 0.0
 
     def __init__(self):
-        id_file_name = "db/cart_objects/id_list.pickle"
-
-        try:
-            id_file = open(id_file_name, "rb")
-            id_list = pickle.load(id_file)
-            id_file.close()
+        id_list = database.get_cart_ids()
+        if not id_list:
+            self.id = 0
+            id_list.append(0)
+            database.save_cart_ids(id_list)
+        else:
             list_len = len(id_list)
-            last_id = id_list[list_len-1]
+            last_id = id_list[list_len - 1]
             next_id = last_id + 1
             self.id = next_id
             id_list.append(next_id)
-            id_file = open(id_file_name, "wb")
-            pickle.dump(id_list, id_file)
-            id_file.close()
+            database.save_cart_ids(id_list)
+        database.save_cart(self)
 
-        except FileNotFoundError:
-            self.id = 0
-            id_list = [0]
-            id_file = open(id_file_name, "wb")
-            pickle.dump(id_list, id_file)
-            id_file.close()
-
-        self.save_obj()
-
-    def save_obj(self):
-        file_name = "db/cart_objects/cart"+str(self.id)+".pickle"
-        if os.path.exists(file_name):
-            os.remove(file_name)
-        p_out = open(file_name, "wb")
-        pickle.dump(self, p_out)
-        p_out.close()
-
-    @staticmethod
-    def get_obj(cart_id):
-        file_name = "db/cart_objects/cart"+str(cart_id)+".pickle"
-        p_in = open(file_name, "rb")
-        new_obj = pickle.load(p_in)
-        p_in.close()
-        return new_obj
-
-    @staticmethod
-    def remove(cart_id):
-        id_file_name = "db/cart_objects/id_list.pickle"
-        id_file = open(id_file_name, "rb")
-        id_list = pickle.load(id_file)
-        id_file.close()
-        if cart_id in id_list:
-            id_list.remove(cart_id)
-        cart_file_name = "db/cart_objects/cart" + str(cart_id) + ".pickle"
-        if os.path.exists(cart_file_name):
-            os.remove(cart_file_name)
+    def remove(self):
+        database.remove_cart(self.id)
 
 
 # a = Cart()
 # b = Cart()
 # c = Cart()
-Cart.remove(0)
+
