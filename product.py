@@ -66,9 +66,34 @@ class Product:
         if os.path.exists(product_file_name):
             os.remove(product_file_name)
 
+    @staticmethod
+    def get_all_products():
+        id_file_name = "db/product_objects/id_list.pickle"
+        id_file = open(id_file_name, "rb")
+        id_list = pickle.load(id_file)
+        id_file.close()
+        all_products = []
+        for i in id_list:
+            product_file_name = "db/product_objects/product"+str(i)+".pickle"
+            if os.path.exists(product_file_name):
+                product_file = open(product_file_name, "rb")
+                product_obj = pickle.load(product_file)
+                all_products.append(product_obj)
+                product_file.close()
+
+        return all_products
+
+    def get_string(self):
+        prod_string = "id : "+str(self.id)+"\nname : "+str(self.name)+"\nprice : "+str(self.price)+"\n"
+        return prod_string
+
+
 # a = Product("product1", 23.40, "grp1", "sub1")
 # b = Product("product2", 34.50, "grp2", "sub1")
 # c = Product("product3", 100.00, "grp2", "sub2")
 
 
-Product.remove(1)
+# Product.remove(1)
+all_prods = Product.get_all_products()
+for prod in all_prods:
+    print(prod.get_string())

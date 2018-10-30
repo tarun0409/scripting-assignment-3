@@ -64,4 +64,4 @@ class Admin:
 # a = Admin("user1")
 # b = Admin("user2")
 # c = Admin("user3")
-Admin.remove(6)
+# Admin.remove(6)
