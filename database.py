@@ -85,7 +85,7 @@ def remove_product(product_id):
     id_list = get_product_ids()
     id_list.remove(product_id)
     save_product_ids(id_list)
-    file_name = "db/cart_objects/cart" + str(product_id) + ".pickle"
+    file_name = "db/product_objects/product" + str(product_id) + ".pickle"
     if os.path.exists(file_name):
         os.remove(file_name)
 
@@ -222,8 +222,8 @@ def remove_guest(guest_id):
         os.remove(file_name)
 
 
-def save_payments(customer_id, payment_obj):
-    file_name = "db/payment_objects/guest" + str(customer_id) + ".pickle"
+def save_payment(payment_obj):
+    file_name = "db/payment_objects/payment" + str(payment_obj.id) + ".pickle"
     if os.path.exists(file_name):
         os.remove(file_name)
     p_out = open(file_name, "wb")
@@ -231,17 +231,80 @@ def save_payments(customer_id, payment_obj):
     p_out.close()
 
 
-def get_payments(customer_id):
-    file_name = "db/payment_objects/customer" + str(customer_id) + ".pickle"
-    if not os.path.exists(file_name):
-        return []
+def get_payment(payment_id):
+    file_name = "db/payment_objects/payment" + str(payment_id) + ".pickle"
     p_in = open(file_name, "rb")
     new_obj = pickle.load(p_in)
     p_in.close()
     return new_obj
 
 
-def remove_payments(customer_id):
-    file_name = "db/payment_objects/customer" + str(customer_id) + ".pickle"
+def get_payment_ids():
+    id_file_name = "db/payment_objects/id_list.pickle"
+    id_list = []
+    if os.path.exists(id_file_name):
+        id_file = open(id_file_name, "rb")
+        id_list = pickle.load(id_file)
+        id_file.close()
+        return id_list
+    return id_list
+
+
+def save_payment_ids(id_list):
+    id_file_name = "db/payment_objects/id_list.pickle"
+    id_file = open(id_file_name, "wb")
+    pickle.dump(id_list, id_file)
+    id_file.close()
+
+
+def remove_payment(payment_id):
+    id_list = get_payment_ids()
+    id_list.remove(payment_id)
+    save_payment_ids(id_list)
+    file_name = "db/payment_objects/payment" + str(payment_id) + ".pickle"
+    if os.path.exists(file_name):
+        os.remove(file_name)
+
+
+def save_shipment(shipment_obj):
+    file_name = "db/shipment_objects/shipment" + str(shipment_obj.id) + ".pickle"
+    if os.path.exists(file_name):
+        os.remove(file_name)
+    p_out = open(file_name, "wb")
+    pickle.dump(shipment_obj, p_out)
+    p_out.close()
+
+
+def get_shipment(shipment_id):
+    file_name = "db/shipment_objects/shipment" + str(shipment_id) + ".pickle"
+    p_in = open(file_name, "rb")
+    new_obj = pickle.load(p_in)
+    p_in.close()
+    return new_obj
+
+
+def get_shipment_ids():
+    id_file_name = "db/shipment_objects/id_list.pickle"
+    id_list = []
+    if os.path.exists(id_file_name):
+        id_file = open(id_file_name, "rb")
+        id_list = pickle.load(id_file)
+        id_file.close()
+        return id_list
+    return id_list
+
+
+def save_shipment_ids(id_list):
+    id_file_name = "db/shipment_objects/id_list.pickle"
+    id_file = open(id_file_name, "wb")
+    pickle.dump(id_list, id_file)
+    id_file.close()
+
+
+def remove_shipment(shipment_id):
+    id_list = get_shipment_ids()
+    id_list.remove(shipment_id)
+    save_shipment_ids(id_list)
+    file_name = "db/shipment_objects/shipment" + str(shipment_id) + ".pickle"
     if os.path.exists(file_name):
         os.remove(file_name)

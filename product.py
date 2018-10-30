@@ -27,8 +27,25 @@ class Product:
             database.save_product_ids(id_list)
         database.save_product(self)
 
+    def modify_product(self, attribute_name, modified_value):
+        print("reached modify")
+        if attribute_name == "name":
+            self.name = modified_value
+        elif attribute_name == "price":
+            self.price = modified_value
+        elif attribute_name == "group":
+            self.price = modified_value
+        elif attribute_name == "subgroup":
+            self.sub_group = modified_value
+        database.save_product(self)
+
     def remove(self):
         database.remove_product(self.id)
+
+    def get_string(self):
+        prod_str = "id = "+str(self.id)+"\nname = "+self.name+"\nprice = "+str(self.price)+"\n"
+        return prod_str
+
 
 
 # a = Product("product1", 23.40, "grp1", "sub1")

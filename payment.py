@@ -12,15 +12,25 @@ class Payment:
         self.name = name
         self.card_type = card_type
         self.cart_number = card_number
-        payments = database.get_payments(customer_id)
-        payments.append(self)
-        database.save_payments(self.customer_id, payments)
+        id_list = database.get_payment_ids()
+        if not id_list:
+            self.id = 0
+            id_list.append(0)
+            database.save_payment_ids(id_list)
+        else:
+            list_len = len(id_list)
+            last_id = id_list[list_len - 1]
+            next_id = last_id + 1
+            self.id = next_id
+            id_list.append(next_id)
+            database.save_payment_ids(id_list)
+        database.save_payment(self)
 
     def remove(self):
-        database.remove_payments(self.customer_id)
+        database.remove_payment(self.id)
 
 
-# a = Payment(0, "name1", "visa", "1234")
-# b = Payment(0, "name2", "master card", "1235")
-# c = Payment(1, "name3", "visa", "12300")
+a = Payment(0, "name1", "visa", "1234")
+b = Payment(0, "name2", "master card", "1235")
+c = Payment(1, "name3", "visa", "12300")
 
