@@ -200,38 +200,40 @@ def view_cart(customer_obj, cart_obj):
 
 
 def get_customer_menu(customer_obj, cart_obj):
-    view_products(customer_obj)
     print()
-    print("1. Buy product")
-    print("2. Add product to cart")
-    print("3. Delete product from cart")
-    print("4. View cart")
-    print("5. Buy products in cart")
-    print("6. Exit")
+    print("1. View products")
+    print("2. Buy product")
+    print("3. Add product to cart")
+    print("4. Delete product from cart")
+    print("5. View cart")
+    print("6. Buy products in cart")
+    print("7. Exit")
     opt = int(input("Enter the appropriate number : "))
-    while opt != 6:
+    while opt != 7:
         if opt == 1:
-            buy_product(customer_obj)
+            view_products(customer_obj)
         elif opt == 2:
+            buy_product(customer_obj)
+        elif opt == 3:
             product_id = int(input("Enter the ID of the product to add : "))
             prod_obj = database.get_product(product_id)
             customer_obj.add_to_cart(cart_obj, prod_obj)
-        elif opt == 3:
+        elif opt == 4:
             product_id = int(input("Enter the ID of the product to delete : "))
             prod_obj = database.get_product(product_id)
             customer_obj.delete_from_cart(cart_obj, prod_obj)
-        elif opt == 4:
-            view_cart(customer_obj, cart_obj)
         elif opt == 5:
+            view_cart(customer_obj, cart_obj)
+        elif opt == 6:
             buy_cart(customer_obj, cart_obj)
-        view_products(customer_obj)
         print()
-        print("1. Buy product")
-        print("2. Add product to cart")
-        print("3. Delete product from cart")
-        print("4. View cart")
-        print("5. Buy products in cart")
-        print("6. Exit")
+        print("1. View products")
+        print("2. Buy product")
+        print("3. Add product to cart")
+        print("4. Delete product from cart")
+        print("5. View cart")
+        print("6. Buy products in cart")
+        print("7. Exit")
         opt = int(input("Enter the appropriate number : "))
 
 
