@@ -263,4 +263,4 @@ def get_first_menu():
         print("Thank you please visit again")
 
 
-customer_login_menu()
+get_first_menu()
