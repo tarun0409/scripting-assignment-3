@@ -52,20 +52,20 @@ def tail(text):
 
 
 def tr(text, src, dst):
-    # trans_table = dict()
-    # for i in range(0, len(src)):
-    #     trans_table[src[i]] = dst[i]
-    # t_list = list(text)
-    # ui = list()
-    # for c in src:
-    #     for i in range(0, len(t_list)):
-    #         if (t_list[i] == c) and (i not in ui):
-    #             t_list[i] = trans_table[c]
-    #             ui.append(i)
-    # res = "".join(t_list)
-    # print(res)
-    tb = str.maketrans(src, dst)
-    print(text.translate(tb))
+    trans_table = dict()
+    for i in range(0, len(src)):
+        trans_table[src[i]] = dst[i]
+    t_list = list(text)
+    ui = list()
+    for c in src:
+        for i in range(0, len(t_list)):
+            if (t_list[i] == c) and (i not in ui):
+                t_list[i] = trans_table[c]
+                ui.append(i)
+    res = "".join(t_list)
+    print(res)
+    # tb = str.maketrans(src, dst)
+    # print(text.translate(tb))
 
 
 def sed(text, src, dst, is_global):
