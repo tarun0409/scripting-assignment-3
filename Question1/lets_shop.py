@@ -7,6 +7,8 @@ from guest import Guest
 
 
 def get_admin_create_menu():
+    print("CREATE ADMIN")
+    print()
     admin_name = input("Admin Name : ")
     admin_obj = Admin(admin_name)
     database.save_admin(admin_obj)
@@ -39,6 +41,8 @@ def view_products(obj):
 
 
 def add_product_menu(admin_obj):
+    print("ENTER DETAILS OF NEW PRODUCT")
+    print()
     prod_name = input("Name : ")
     prod_price = float(input("Price : "))
     prod_group = input("Group : ")
@@ -67,6 +71,8 @@ def modify_product_menu(admin_obj):
 
 
 def get_admin_menu(admin_obj):
+    print("ADMIN MENU")
+    print()
     print("1. View products")
     print("2. Add products")
     print("3. Delete products")
@@ -85,16 +91,21 @@ def get_admin_menu(admin_obj):
         elif opt == 5:
             shipment_id = int(input("Enter the shipment ID : "))
             admin_obj.confirm_delivery(shipment_id)
+        elif opt != 6:
+            print("Invalid option! Try again")
+        print("ADMIN MENU")
+        print()
         print("1. View products")
         print("2. Add products")
         print("3. Delete products")
         print("4. Modify products")
-        print("5. Make shipment")
-        print("6. Confirm Delivery")
+        print("5. Confirm Delivery")
         opt = int(input("Enter the appropriate number : "))
 
 
 def get_admin_login_menu():
+    print("ADMIN LOGIN")
+    print()
     admin_name = input("Admin Name : ")
     admin_id = database.get_admin_id_from_name(admin_name)
     admin_obj = database.get_admin(admin_id)
@@ -102,6 +113,8 @@ def get_admin_login_menu():
 
 
 def get_admin_start_menu():
+    print("ADMIN CONTROLS")
+    print()
     print("1. Login as admin")
     print("2. Create admin")
     opt = int(input("Choose corresponding number: "))
@@ -111,17 +124,23 @@ def get_admin_start_menu():
         get_admin_create_menu()
     else:
         print("Invalid option")
+    get_first_menu()
 
 
 def get_register_menu():
+    print("REGISTER NEW USER")
+    print()
     customer_name = input("Name : ")
     customer_address = input("Address : ")
     phone_number = input("Phone number : ")
     customer_obj = Customer(customer_name, customer_address, phone_number)
     database.save_customer(customer_obj)
+    customer_login_menu()
 
 
 def get_guest_menu():
+    print("LOGGED AS GUEST")
+    print()
     guest_obj = Guest()
     print("1. View products")
     print("2. Register")
@@ -133,6 +152,10 @@ def get_guest_menu():
         elif opt == 2:
             get_register_menu()
             break
+        elif opt != 3:
+            print("Invalid option! Try again")
+        print("LOGGED AS GUEST")
+        print()
         print("1. View products")
         print("2. Register")
         print("3. Exit")
@@ -143,11 +166,15 @@ def buy_product(customer_obj):
     view_products(customer_obj)
     print()
     product_id = int(input("Enter the id of the product to buy : "))
-    quantity = int(input("Enter the quantity : "))
     product_obj = database.get_product(product_id)
+    if product_obj is None:
+        print("Enter a valid product ID!")
+        return
+    quantity = int(input("Enter the quantity : "))
     price = product_obj.get_price() * quantity
     print("Total price to be paid "+str(price))
-    print("Payment details : ")
+    print()
+    print("PAYMENT DETAILS")
     card_type = input("Enter card type : ")
     card_num = input("Enter card number : ")
     payment_obj = Payment(customer_obj.get_id(), price, card_type, card_num)
@@ -174,6 +201,8 @@ def buy_cart(customer_obj, cart_obj):
 
 
 def view_cart(customer_obj, cart_obj):
+    print("CART ITEMS")
+    print()
     products = customer_obj.get_products_details(cart_obj.get_cart_items())
     max_len = 0
     first = True
@@ -207,9 +236,10 @@ def get_customer_menu(customer_obj, cart_obj):
     print("4. Delete product from cart")
     print("5. View cart")
     print("6. Buy products in cart")
-    print("7. Exit")
+    print("7. View bought products")
+    print("8. Exit")
     opt = int(input("Enter the appropriate number : "))
-    while opt != 7:
+    while opt != 8:
         if opt == 1:
             view_products(customer_obj)
         elif opt == 2:
@@ -226,6 +256,10 @@ def get_customer_menu(customer_obj, cart_obj):
             view_cart(customer_obj, cart_obj)
         elif opt == 6:
             buy_cart(customer_obj, cart_obj)
+        elif opt == 7:
+            customer_obj.view_bought_products()
+        elif opt != 8:
+            print("Invalid option! Try again")
         print()
         print("1. View products")
         print("2. Buy product")
@@ -233,11 +267,13 @@ def get_customer_menu(customer_obj, cart_obj):
         print("4. Delete product from cart")
         print("5. View cart")
         print("6. Buy products in cart")
-        print("7. Exit")
+        print("7. View bought products")
+        print("8. Exit")
         opt = int(input("Enter the appropriate number : "))
 
 
 def customer_login_menu():
+    print("CUSTOMER LOGIN")
     customer_name = input("Name : ")
     customer_id = database.get_customer_id_from_name(customer_name)
     customer_obj = database.get_customer(customer_id)
@@ -246,6 +282,7 @@ def customer_login_menu():
 
 
 def get_first_menu():
+    print("WELCOME TO LETS SHOP")
     print("How would you like to continue?")
     print("1. Login")
     print("2. Register")

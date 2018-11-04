@@ -10,6 +10,7 @@ class Customer:
     name = "unknown"
     address = "location unknown"
     phone_number = 100
+    products_bought = []
 
     def __init__(self, name, address, phone_number):
         self.name = name
@@ -39,8 +40,12 @@ class Customer:
     def buy_product(self, product_obj, payment_obj, quantity):
         total_price = product_obj.get_price() * quantity
         if payment_obj.get_price() >= total_price:
+            bp = database.get_prods_bought(self)
+            bp.append(product_obj.get_id())
+            database.save_prods_bought(self, bp)
             shipment_obj = Shipment(self.id, product_obj.get_id(), quantity, payment_obj.get_id())
             database.save_shipment(shipment_obj)
+            database.save_customer(self)
             return True
         return False
 
@@ -53,9 +58,13 @@ class Customer:
         if payment_obj.get_price() >= total_price:
             i = 0
             for prod in product_list:
+                bp = database.get_prods_bought(self)
+                bp.append(prod.get_id())
+                database.save_prods_bought(self, bp)
                 shipment_obj = Shipment(self.id, prod.get_id(), 99, payment_obj.get_id())
                 database.save_shipment(shipment_obj)
                 i += 1
+            database.save_customer(self)
             return True
         return False
 
@@ -104,5 +113,34 @@ class Customer:
     def get_products_from_cart(self, cart_obj):
         prods = cart_obj.get_cart_items()
         return prods
+
+    def view_bought_products(self):
+        prod_objects = []
+        pb = database.get_prods_bought(self)
+        for prod_id in pb:
+            prod_objects.append(database.get_product(prod_id))
+        products = self.get_products_details(prod_objects)
+        max_len = 0
+        first = True
+        prod_keys = []
+        for prod in products:
+            if first:
+                prod_keys = list(prod.keys())
+                first = False
+            for key in prod:
+                if len(key) > max_len:
+                    max_len = len(str(key))
+                if len(str(prod[key])) > max_len:
+                    max_len = len(str(prod[key]))
+        format_string = "{:<" + str(max_len + 5) + "}"
+        print()
+        for key in prod_keys:
+            print(format_string.format(key), end="")
+        print()
+        for prod in products:
+            for key in prod:
+                value = prod[key]
+                print(format_string.format(value), end="")
+            print()
 
 

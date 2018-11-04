@@ -84,6 +84,8 @@ def save_product(product_obj):
 
 def get_product(product_id):
     file_name = "db/product_objects/product" + str(product_id) + ".pickle"
+    if not os.path.exists(file_name):
+        return None
     p_in = open(file_name, "rb")
     new_obj = pickle.load(p_in)
     p_in.close()
@@ -159,6 +161,25 @@ def remove_cart(cart_id):
     file_name = "db/cart_objects/cart" + str(cart_id) + ".pickle"
     if os.path.exists(file_name):
         os.remove(file_name)
+
+
+def get_prods_bought(customer_obj):
+    file_name = "db/customer_objects/customer_bought" + str(customer_obj.id) + ".pickle"
+    if os.path.exists(file_name):
+        p_in = open(file_name, "rb")
+        new_obj = pickle.load(p_in)
+        p_in.close()
+        return new_obj
+    return []
+
+
+def save_prods_bought(customer_obj, prods_bought):
+    file_name = "db/customer_objects/customer_bought" + str(customer_obj.id) + ".pickle"
+    if os.path.exists(file_name):
+        os.remove(file_name)
+    p_out = open(file_name, "wb")
+    pickle.dump(prods_bought, p_out)
+    p_out.close()
 
 
 def save_customer(customer_obj):
